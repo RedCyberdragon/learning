@@ -1,0 +1,27 @@
+So, after searching for a tutorial for so long and finding ones that told
+me to set up an SSH key and deleting that SSH key and copying the deleted
+file to a random folder which didn't exist, I devided to make a list about
+how I learned how to use Git with Github in hopes that it will be helpful
+to someone someday.
+
+WARNING: This process may contain vulnerabilities and bad practices and 
+should not be used as an authoritative log.
+
+My system:
+Custom Built Ubuntu 14.04 64-bit
+
+1.	Creating an SSH keypair
+
+1.1	Get to your hidden SSH folder.
+	$cd ~/.ssh
+
+1.2	This version of Ubuntu seems to have a tool for generating SSH
+	keys pre-installed, conveniently called ssh-keygen. Start it up.
+	$ssh-keygen -t rsa -C "your_email@youremail.com"
+
+1.3	Backing up the key is a good idea, I suppose, so I'm going to go
+	ahead and do that here in a folder called key_backup
+	$mkdir key_backup
+	$cp id_rsa* key_backup
+
+1.4	So, once you have a key, you can set it up
